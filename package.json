@@ -1,14 +1,13 @@
 {
-  "name": "igniter-server",
+  "name": "igniter",
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && npm start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "client-install": "cd client && npm install",
+    "server": "cd server && nodemon server.js",
+    "server-install": "cd server && npm install",
+    "install": "concurrently \"npm run client-install\" \"npm run server-install\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
