@@ -10,6 +10,10 @@ package-lock.json
 /client/package-lock.json
 /server/package-lock.json
 
+#configs
+/client/config.js
+/server/config.js
+
 # testing
 /coverage
 
